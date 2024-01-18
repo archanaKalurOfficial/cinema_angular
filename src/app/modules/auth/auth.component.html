@@ -1,0 +1,30 @@
+<div class="landing-page">
+    <div class="form">
+        <form action="" *ngIf="!isShowRegisterPage">
+            <br>
+            <h4 align="center">Login</h4>
+            <hr>
+            <input type="text" name="nm" id="nm" maxlength="20" placeholder="Username">
+            <input type="password" name="pss" id="pss" maxlength="20" placeholder="password">
+            <br>
+            <p><button>Sign in</button></p>
+            <p class="txt-primary"> Don't have account? <span><a class="lblRegister-link"
+                        (click)="lblRegister_click()">Register</a></span></p>
+            <br>
+        </form>
+        <form action="" *ngIf="isShowRegisterPage">
+            <br>
+            <h4 align="center">Register</h4>
+            <hr>
+            <input type="password" name="pss" id="pss" maxlength="20" placeholder="Email Id">
+            <input type="text" name="nm" id="nm" maxlength="20" placeholder="Username">
+            <input type="text" name="nm" id="nm" maxlength="20" placeholder="Password">
+            <input type="text" name="nm" id="nm" maxlength="20" placeholder="Confirm Password">
+            <br>
+            <p><button>Register</button></p>
+            <p class="txt-primary"> Do you have account? <span><a class="lblRegister-link"
+                        (click)="lbllogin_click()">Login</a></span></p>
+            <br>
+        </form>
+    </div>
+</div>

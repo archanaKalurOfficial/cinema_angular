@@ -1,0 +1,10 @@
+<div class="dashboard-bg" style="height: 100%;">
+    <header style="height: 100%;">
+        <app-navbar class="dash-navbar"></app-navbar>
+        <div class="category-section" *ngIf="showData">
+            <p class="cat-title">favourite Movies</p>
+            <hr>
+            <app-moview-card-grid [lstMovies]="lstFavMovies"></app-moview-card-grid>
+        </div>
+    </header>
+</div>

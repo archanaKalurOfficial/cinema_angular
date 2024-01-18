@@ -1,0 +1,23 @@
+<div class="container-fluid cards" *ngIf="showGrid">
+    <ng-container *ngFor="let movie of lstMovies; index as i;">
+        <div class="card" (click)="fetchMovieDetail(movie.moV_Key)">
+            <img src="assets/images/movies/{{movie.moV_MovieImg.moV_IMG_Name}}">
+            <div class="content">
+                <h3>{{movie.moV_Name}} - {{movie.moV_RelaseYear}}</h3>
+                <!-- <p>Emotional Drama</p>  -->
+                <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+
+                </div>
+                <!-- <div>
+                <button type="button"> <span><i class="bi bi-play-fill"></i></span></button>
+            </div> -->
+            </div>
+        </div>
+    </ng-container>
+
+
+</div>

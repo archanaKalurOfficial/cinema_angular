@@ -1,0 +1,40 @@
+<div class="m-detail"
+    [ngStyle]="{'background': 'url(assets/images/movies/' + objMovie.moV_MoviePoster.moV_IMG_Name+') no-repeat center center/cover'}">
+    <header>
+        <app-navbar></app-navbar>
+        <section *ngIf="showData">
+            <div class="content">
+                <h1>{{objMovie.moV_Name}}</h1>
+                <h3>({{objMovie.moV_RelaseYear}})</h3>
+                <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+
+                </div>
+                <div class="mov-type">
+                    {{objMovie.moV_Type}}
+                </div>
+                <div class="btns" style="margin-top: 15px">
+                    <button type="button" class="btn btn-primary">Play Now <span><i
+                                class="bi bi-play-fill"></i></span></button>
+
+                    &nbsp;<button type="button" class="btn btn-danger" (click)="manageFavMovie()"
+                        *ngIf="objMovie.moV_IsFav==1"><span><i class="bi bi-heart-fill liked_movie"></i></span></button>
+                    <button type="button" class="btn btn-danger" (click)="manageFavMovie()"
+                        *ngIf="objMovie.moV_IsFav==0"><span><i class="bi bi-heart-fill"></i></span></button>
+                </div>
+                <p>
+                    {{objMovie.moV_DESC}}
+                </p>
+                <p>
+                    Starring:{{objMovie.moV_Cast}}
+                    <br> Directed By : {{objMovie.moV_DirectedBy}}
+                </p>
+            </div>
+        </section>
+
+        <app-moview-card-grid [lstMovies]="lstPreferedList" *ngIf="showGrid"></app-moview-card-grid>
+    </header>
+</div>

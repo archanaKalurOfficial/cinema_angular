@@ -1,0 +1,38 @@
+<div class="dashboard-bg">
+    <header>
+
+        <app-navbar class="dash-navbar" (onSearch)="fetchSearchedData($event)"></app-navbar>
+        <div class="category-section" *ngIf="showData && !showSearchResult">
+            <p class="cat-title">Trending Movies</p>
+            <hr>
+            <app-moview-card-grid [lstMovies]="lstFeaturedMovies"></app-moview-card-grid>
+        </div>
+        <div class="category-section" *ngIf="showData && !showSearchResult">
+            <p class="cat-title">Recently Added Movies</p>
+            <hr>
+            <app-moview-card-grid [lstMovies]="objDashboard.recentlyAddedMovies"></app-moview-card-grid>
+        </div>
+        <div class="category-section" *ngIf="showData && !showSearchResult">
+            <p class="cat-title">You May like this</p>
+            <hr>
+            <app-moview-card-grid [lstMovies]="objDashboard.recentlyAddedMovies"></app-moview-card-grid>
+        </div>
+        <div class="category-section" *ngIf="showData&& !showSearchResult">
+            <p class="cat-title">You May like this</p>
+            <hr>
+            <app-moview-card-grid [lstMovies]="objDashboard.recentlyAddedMovies"></app-moview-card-grid>
+        </div>
+
+        <div class="category-section" *ngIf="showData && showSearchResult">
+            <p class="cat-title">You have searched for </p>
+            <hr>
+            <app-moview-card-grid [lstMovies]="searchedMovies"></app-moview-card-grid>
+        </div>
+        <div class="category-section" *ngIf="!showData && showSearchResult">
+            <p class="cat-title">You have searched for </p>
+            <hr>
+            <p class="cat-title">No Data Found</p>
+        </div>
+
+    </header>
+</div>

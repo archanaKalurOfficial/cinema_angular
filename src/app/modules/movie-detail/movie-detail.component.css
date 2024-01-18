@@ -1,0 +1,155 @@
+.m-detail{
+    background: #131314;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:100vh;
+    position: relative;
+    box-shadow:inset 0 0 100em 8em #000;
+
+}
+.m-detail::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background: url('https://cdn.wionews.com/sites/default/files/2023/10/09/384982-horizons-2023-10-09t142730615.jpg') no-repeat center center/cover; */
+    backdrop-filter: blur(5px);
+    opacity: .40;
+}
+
+header{
+    position:relative;
+    width: 90%;
+    height: 90%;
+    border: 4px solid gray;
+    border-radius: 20px;
+    z-index:2
+}
+header  .main-img{
+    position:relative;
+    width: 100%;
+    height: 100%;
+    top:0px;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+
+header .mic_dot{
+    position: relative;
+    width: 100px;
+    height: 15px;
+    background: gray;
+    left: 47%;
+    top:-3px;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header .mic_dot .mic{
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    border-radius: 50px;
+    margin-right: 10px;
+    margin-bottom: 1px;
+}
+
+header .mic_dot .dot{
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+}
+/* paste */
+
+header section{
+    /* border:1px solid #fff; */
+    width:95%;
+    height:56.5%;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+
+header section .content{
+    /* border:1px solid #fff; */
+    width:40%;
+    height:70%;
+    padding-left: 60px;
+}
+
+header section .content h1{
+    color:#fff;
+    font-family: "system-ui";
+}
+
+header section .content h1 span {
+    background:  red;
+    padding: 0px 15 px;
+}
+
+header section .content h3{
+    color:#fff;
+    font-family: "system-ui";
+    
+}
+
+header section .content .rating{
+    color:#fff;
+    font-size: 14px;
+    margin-top: 15px;
+    color: yellow;
+    
+}
+header section .content .mov-type{
+    color:#fff;
+    font-size: 15px;
+}
+
+header section .content .mov-type span{
+    color:gray;
+    font-size: 15px;
+}
+
+header section .content .btn-primary:hover{
+    font-size: 20px;
+    background-color: rgb(172, 252, 172);
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+ }
+
+ header section .content .btn-danger:hover{
+    font-size: 20px;
+    background-color: rgb(172, 252, 172);
+    color:red;
+    font-weight: bold;
+ }
+
+ header section .content .btn-danger.liked_movie{
+    color:#fff;
+    font-size: 14px;
+    margin-top: 15px;
+    color: yellow;
+    
+}
+ header section .content .mov-desc{
+    color:gray;
+    font-size: 15px;
+ }
+ 
+ header section .content p{
+    color:#fff;
+    font-size: 10px;
+    margin-top: 15px;
+    font-family: sans-serif;
+    
+}
